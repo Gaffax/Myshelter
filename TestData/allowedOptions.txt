@@ -1,0 +1,4 @@
+dogs Hunde
+alcohol Alcohol
+men Mænd
+women Kvinder
