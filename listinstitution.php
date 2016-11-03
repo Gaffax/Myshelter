@@ -39,7 +39,7 @@
         <!-- /.row -->
 
         <!-- Institution list Row -->
-        <?php #include D_TEMPLATE.'/institutionlist.php'; ?>
+        <?php include D_TEMPLATE.'/institutionlist.php'; ?>
         <!-- /.row -->
 
         <!-- Related Projects Row -->
