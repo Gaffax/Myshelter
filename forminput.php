@@ -78,7 +78,7 @@
                 <p>
                   <!-- Website -->
                   <label for="website">Website:</label>
-                  <input type="text" name="email" id="website">
+                  <input type="text" name="website" id="website">
                 </p>
                 <input type="submit" value="Submit">
               </form>
