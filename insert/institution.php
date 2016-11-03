@@ -26,4 +26,11 @@
 
       // close connection
       mysqli_close($link);
+
+      /* Redirect browser */
+      header("Location: ../listinstitution.php");
+
+      /* Make sure that code below does not get executed when we redirect. */
+      exit;
+      ?>
     ?>
