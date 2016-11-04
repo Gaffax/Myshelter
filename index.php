@@ -1,57 +1,40 @@
 <?php
+
+    //Native includes
     include 'config/setup.php';
     include 'functions/dyntable.php';
+    include 'config/DatabaseConnection.php';
 
-    $dbc = dbconnect();
+    //Page variables
     $page = "Hostel";
+    $dbc = new DatabaseConnection('localhost', 'root', 'mben', 'MyshelterDB');
+
  ?>
 
 <!DOCTYPE html>
 <html lang=<?php echo D_LANGUAGE; ?>>
+  <head>
+      <?php include D_TEMPLATE.'/htmlmetadata.php'; ?>
 
-<head>
+      <title>Myshelter | Test site</title>
 
-    <?php include D_TEMPLATE.'/htmlmetadata.php'; ?>
+      <!--Css master page-->
+      <?php include 'config/setupcss.php'; ?>
+  </head>
 
-    <title>Myshelter | Test site</title>
+  <body>
+    <?php
+      $q = "SELECT * FROM $page";
+      $result = $dbc->getdbc()->query($q);
 
-    <!--Css master page-->
-    <?php include 'config/setupcss.php'; ?>
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <?php include D_TEMPLATE.'/navigation.php'; ?>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Portfolio Item Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Portfolio Item
-                    <small>Item Subheading</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Institution list Row -->
-        <?php #include D_TEMPLATE.'/institutionlist.php'; ?>
-        <!-- /.row -->
-
-        <!-- Related Projects Row -->
-        <?php include D_TEMPLATE.'/projectexamplesplaceholder.php'; ?>
-        <!-- /.row -->
-
-        <!-- Footer -->
-        <?php include D_TEMPLATE.'/footer.php'; ?>
-        <!-- /.row -->
-
-    </div>
-</body>
+      while($row = mysqli_fetch_assoc($result)){
+          foreach($row as $cname => $cvalue){
+              print "$cname: $cvalue\t";
+          }
+          print "\r\n";
+      }
+    ?>
+  </body>
 </html>
 
 <!-- Finishes the page. Must be the last item in the page -->
