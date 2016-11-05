@@ -8,7 +8,7 @@
 
     DEFINE ('D_TEMPLATE', 'template');
     DEFINE ('D_LANGUAGE', 'eng');
-
+    DEFINE ('D_INSERT','insert');
 
     $dbc = dbconnect(); //Connects to database
 ?>
