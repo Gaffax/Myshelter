@@ -7,17 +7,16 @@
         private $database;
 
         private $dbc;
-
       // Dev connection
       public function __construct(){
         $this->server   = "localhost";
         $this->user     = "root";
         $this->password = "mben";
         $this->database = "MyshelterDB";
-
+        parent::__construct($this->server, $this->user, $this->password, $this->database);
         //Create mysqli connection
-        $this->dbc = mysqli_connect($this->server, $this->user, $this->password, $this->database)
-        OR die('Alert'.mysqli_connect_error());
+        // $this->dbc = mysqli_connect($this->server, $this->user, $this->password, $this->database)
+        // OR die('Alert'.mysqli_connect_error());
       }
 
       // Deploy connection
@@ -31,10 +30,19 @@
         $this->dbc = mysqli_connect($this->server, $this->user, $this->password, $this->database)
         OR die('Alert'.mysqli_connect_error());
       }
+//       public function query(){
+//         setconfig(nextConfit());
+//         while(error){
+// try()
+//         parent->query();
+//
+//         }
+
+      }
 
       //Get connection for accessing database
-      public function getdbc(){
-        return $this->dbc;
-      }
-    }
+      // public function getdbc(){
+      //   return $this->dbc;
+      // }
+      // }
 ?>

@@ -22,6 +22,13 @@
                 <li>
                   <a href="forminput.php">Inset data</a>
                 </li>
+                <li>
+                  <a href="allowedlist.php">Allowed stuff</a>
+                </li>
+                <li>
+                  <a href="insertallowedoptions.php">Inset allowed</a>
+                </li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->

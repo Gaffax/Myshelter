@@ -11,4 +11,6 @@
     DEFINE ('D_INSERT','insert');
 
     $dbc = dbconnect(); //Connects to database
+        // $dbc = new mysqli("localhost", "root", "mben", "MyshelterDB");
+        // $dbc = new mysqli("120.203.30.1", "root", "mben", "MyshelterDB");
 ?>
